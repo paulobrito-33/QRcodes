@@ -1,1 +1,16 @@
-
+<!DOCTYPE html>
+<html lang="pt-br">
+<meta charset="utf-8">
+<title>QR ID</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;display:flex;place-content:center;place-items:center;font-family:Inter,sans-serif;height:100vh;background:#f0f2f5}
+  h1{font-size:clamp(2.5rem,4vw,4rem);color:#111}
+</style>
+<h1 id="msg">Carregando…</h1>
+<script>
+  const p   = new URLSearchParams(location.search);
+  const id  = p.get('id') || 'desconhecido';
+  document.getElementById('msg').textContent = `#id___${id}`;
+</script>
